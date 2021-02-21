@@ -3,21 +3,18 @@ function getName(event){
     let date = document.getElementById('date').value
     let outputTag = document.getElementById('output')
     //let myBirthday = new Date(date).value
-    let myBirthday = new Date(date).toDateString()
+    let myBirthday = new Date(date).toDateString()[ 0 ]
     let day = myBirthday.split(' ')
     let name = document.getElementById('name').value
     let gender = document.getElementById('gender').value
-    let message =`Hey ${name} you were born on ${day} and you are ${gender}`
-    outputTag.innerHTML = message
-}
 
-let femalenames = [Akosua,Adwoa,Abenaa,Akua,Yaa,Afua,Ama]
-let malenames = [Kwasi,Kwadwo,Kwabena,Kwaku,Yaw,Kofi,Kofi,Kwame]
-
-function getName(event){
-    if (gender ==='male' && day ==='Sun'){
+    let akanName = document.getElementById('akanName').value
+    let femalenames = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"]
+    let malenames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"]
+    
+    if (gender ==='male' && day ==='S'){
         return malenames[0]
-    }else if (gender ==='male' && day ==='Mon'){
+    }else if (gender ==='male' && day ==='M'){
         return malenames[1]
     } else if (gender ==='male' && day ==='Tue'){
         return malenames[2]
@@ -44,4 +41,7 @@ function getName(event){
     }else if (gender ==='female' && day ==='Sat'){
         return femalenames[6]
     }
+
+    let message =`Hey ${name} you were born on ${day} and you are ${gender}. Your Akan name is ${akanName}`
+    outputTag.innerHTML = message
 }
