@@ -12,9 +12,34 @@
     <!--Create a form whole output is Male or Female-->
 
     <form id= "inputForm" onsubmit="getName(event)" method= "GET">
-    
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name"  placeholder="What is your first Name">
+         </div>
+
+
+     <div>
+        <label for="gender">Gender</label>
+        <select name="gender" id="gender" aria-placeholder="Gender" type="radio" value="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+     </div> 
+
+     <div>
+        <label for="date">Date of Birth</label>
+        <input type="date" name="date" id="date">
+    </div>
+
+       <button type="reset">Reset</button>
+       <button type="submit">Submit</button>
+       
     
     </form>
+
+    <div>
+        <p>output<span id="output"></span></p>
+    </div>
 </body>
 <script src="js/script.js"></script>
 </html>
