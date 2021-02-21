@@ -4,7 +4,6 @@ function getName(event){
     let outputTag = document.getElementById('output')
     let myBirthday = new Date(date).toDateString()
     let day = myBirthday.split( ' ' )[0]
-    alert (day)
     let name = document.getElementById('name').value
     let gender = document.getElementById('gender').value  
     const femaleNames = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"]
@@ -12,12 +11,14 @@ function getName(event){
     console.log(femaleNames);
     console.log(maleNames);
     let solution = document.getElementById('solution')
-     let akanName;
+    let akanName;
+          
+         
 
           if (gender=== 'male' && day==="Sun"){
-               akanName= maleNames[0]
+               akanName= (maleNames[0])
           }else if (gender=== 'male' && day==="Mon"){
-               akanName= maleNames[1]
+               akanName= (maleNames[1])
           }else if (gender=== 'male' && day==="Tue"){
                akanName=maleNames[2]
           }else if (gender=== 'male' && day==="Wed"){
@@ -42,9 +43,10 @@ function getName(event){
                akanName=(femaleNames[5])
           }else if (gender=== 'female' && day==="Sat"){
                akanName=(femaleNames[6])
-          }    
-    let message = `Hey ${name} were born on the ${myBirthday} and you are ${gender}` 
-    solution.innerHTML= `Hey if you were Ghanian your Akan name would have been ${akanName}`
+          }
+       
+    let message = `Hey ${name} your birthday is on the ${myBirthday}` 
+    solution.innerHTML= `You name is ${akanName}.`
     outputTag.innerHTML = message
 
 }

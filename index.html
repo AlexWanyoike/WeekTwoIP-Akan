@@ -1,49 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="CSS/css/bootstrap.css">
     <link rel="stylesheet" href=".//CSS/styles.css">
     <title>Akan Work Project</title>
 </head>
+
 <body>
-    <img src="Images/Green Orange and Pink Leaves Straightforward Education Landscape Poster.png" alt="Akan Poster">
-    <h1>Akan Work Project</h1>
-    <h2>Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born. Here are Ghanian day names.</h2>
-    <!--Create a form whole output is Male or Female-->
-
-    <form id= "inputForm" onsubmit="getName(event)" method= "GET">
-        <div>
-            <label for="name">Name</label>
-            <input type="text" id="name"  placeholder="What is your first Name">
-         </div>
-
-
-     <div>
-        <label for="gender">Gender</label>
-        <select name="gender" id="gender" aria-placeholder="Gender" type="radio" value="gender">
-            <option value="male">male</option>
-            <option value="female">female</option>
-        </select>
-     </div>     
-
-     <div>
-        <label for="date">Date of Birth</label>
-        <input type="date" name="date" id="date">
-    </div>
-
-       <button type="reset">Reset</button>
-       <button type="submit">Submit</button>
-       
+      <img src="Images/Know Your Akan Name.jpg" alt="Image" width="60%"> 
+    <div class="container">
+        <div class="row">
+          <div class="col-9"><h1>Akan Work Project</h1></div>
+          <div class="col-4"><h5>Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born. Here are Ghanian day names.</h5><br></div>
+          <div class="col-8"><br>
+            <form id= "inputForm" onsubmit="getName(event)" method= "GET">
     
-    </form>
+                <div class="mb-3">
+                <label for="name" class="form-label">Name: </label>
+                <input type="text" id="name" class="form-text" placeholder="What is your first Name">
+                </div>
+            
+                <div>
+                <label for="gender" class="form-label">Gender: </label>
+                <select name="gender" id="gender" aria-placeholder="Gender" type="radio" value="gender" class="form-text">
+                    <option value="Male" class="form-text">Male</option>
+                    <option value="Female" class="form-text">Female</option>
+                </select>
+                </div>
+            
+                <div>
+                    <label for="date" class="form-label" class="border border-primary">Date of Birth: </label>
+                    <input type="date" name="date" id="date" class="form-text" class="border border-primary"color="blue">
+                </div>
+                
+                <button type="reset" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Popover title" color="red">Reset</button>
+                <button type="submit" class="btn btn-lg btn-success" data-bs-toggle="popover" title="Popover title" color="green">Submit</button>
+                
+                
+            </form>
+            
+            
+            <div>
+                <p class="text-muted" class="form-label"> Result:<span id="output" ></span></p>
+                <p class="text-muted" class="form-label"> Outcome: <span id="solution"></span></p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
 
-    <div>
-        <p> <strong>Result:</strong> <span id="output"></span></p>
-        <p>Outcome: <span id="solution"></span></p>
-    </div>
+     </body>
+     </html>
 </body>
 <script src="js/script.js"></script>
+
 </html>
