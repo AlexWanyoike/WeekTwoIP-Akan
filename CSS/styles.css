@@ -1,0 +1,12 @@
+h1{
+    text-align: center;
+    text-decoration: blue;
+    font-style: bold;
+}
+.important{
+    text-align: left;
+    color:rgb(13, 13, 233);
+}
+body{
+    background-color: grey;
+}
