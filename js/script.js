@@ -12,11 +12,10 @@ function getName(event){
     console.log(maleNames);
     let solution = document.getElementById('solution')
     let akanName;
-          
-         
-
-          if (gender=== 'male' && day==="Sun"){
-               akanName= (maleNames[0])
+          if (gender=== null|| date===''){
+               alert('Error In Data Input')
+          }else if (gender=== 'male' && day=== "Sun"){
+               akanName= maleNames[0]
           }else if (gender=== 'male' && day==="Mon"){
                akanName= (maleNames[1])
           }else if (gender=== 'male' && day==="Tue"){
@@ -44,6 +43,7 @@ function getName(event){
           }else if (gender=== 'female' && day==="Sat"){
                akanName=(femaleNames[6])
           }
+     
        
     let message = `Hey ${name} your birthday is on the ${myBirthday}` 
     solution.innerHTML= `You name is ${akanName}.`
