@@ -45,7 +45,7 @@ function getName(event){
           }
      
        
-    let message = `Hey ${name} your birthday is on the ${myBirthday}` 
+    let message = `Hey ${name} you were born on ${myBirthday}` 
     solution.innerHTML= `You name is ${akanName}.`
     outputTag.innerHTML = message
 
